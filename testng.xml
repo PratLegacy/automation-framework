@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Practice Suite" parallel="tests" thread-count="10">
+    <listeners>
+        <listener class-name="utils.listeners.TestListener"/>
+        <listener class-name="utils.listeners.AnnotationTransformer"/>
+    </listeners>
+    <test name="Test Basics 1">
+        <parameter name="category" value="Elements"/>
+        <parameter name="subCategory" value="Text Box"/>
+        <classes>
+            <class name="tests.VerifyTextBox"/>
+        </classes>
+    </test>
+    <test name="Test Basics 2">
+        <parameter name="category" value="Elements"/>
+        <parameter name="subCategory" value="Check Box"/>
+        <classes>
+            <class name="tests.VerifyCheckBox"/>
+        </classes>
+    </test>
+</suite>
